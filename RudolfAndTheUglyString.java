@@ -7,18 +7,15 @@ public class RudolfAndTheUglyString {
         while (t-- > 0) {
             int n = scanner.nextInt();
             int remove = 0;
-            StringBuffer sb = new StringBuffer(scanner.next());
-            int index = sb.indexOf("pie");
-            while(index!=-1){
-                sb.deleteCharAt(index+1);
-                index = sb.indexOf("pie");
-                remove++;
-            }
-            index = sb.indexOf("map");
-            while(index!=-1){
-                sb.deleteCharAt(index+1);
-                index = sb.indexOf("map");
-                remove++;
+            String s = scanner.next();
+            for (int i = 0; i < n-2 ; ) {
+                String sub = s.substring(i,i+3);
+                if(sub.equals("map") || sub.equals("pie")) {
+                    remove++;
+                    i+=3;
+                } else {
+                    i++;
+                }
             }
             System.out.println(remove);
         }
