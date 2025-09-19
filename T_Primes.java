@@ -7,12 +7,16 @@ public class T_Primes {
         for (int i = 0; i < n; i++) {
             long x=scanner.nextLong();
             int divisor=0;
-            long loop=x/2;
-            for (long j = 1; j <= loop; j++) {
-                if(x%j==0) divisor++;
+            long loop=(long)Math.sqrt(x);
+            for (long j = 2; j*j <= loop; j++) {
+                if(loop%j==0){
+                    divisor++;
+                    break;
+                }
             }
-            if(divisor==2) System.out.println("YES");
+            if(x>3 && loop*loop==x && divisor==0) System.out.println("YES");
             else System.out.println("NO");
         }
+		scanner.close();
     }
 }
