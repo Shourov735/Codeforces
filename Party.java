@@ -15,6 +15,7 @@ public class Party {
         for (int i = 0; i < 2001; i++) {
             if(a[i]>0) groups++;
         }
+
         System.out.println(groups);
     }
 }
