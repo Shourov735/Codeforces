@@ -3,24 +3,28 @@
 
 int main()
 {
-	int n,i,j,k=1;
+	int n,i,j,k=0;
 	scanf("%d",&n);
-	char name[n][34];
+	char s[33],name[n][33];
 	int repeat[100000]={0};
 	for(i=0;i<n;i++)
 	{
-		scanf("%s",name[i]);
-		for(j=0;j<i;j++)
+		scanf("%s",s);
+		for(j=0;j<k;j++)
 		{
-			if(!strcmp(name[i],name[j])) 
+			if(!strcmp(s,name[j])) 
 			{
-				printf("%s%d\n",name[i],repeat[j]+1);
+				printf("%s%d\n",s,repeat[j]+1);
 				repeat[j]++;
-				j++;
 				break;
 			}
 		}
-		if(strcmp(name[i],name[j-1])) printf("OK\n");
+		if(j==k){
+			printf("OK\n");
+			strcpy(name[k],s);
+			k++;
+			repeat[i]=0;
+		} 
 	} 
 	return 0;
 }

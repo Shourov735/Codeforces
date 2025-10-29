@@ -4,7 +4,20 @@
 	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
-		
+		{
+			"type": "java",
+			"name": "InterestingDrink",
+			"request": "launch",
+			"mainClass": "InterestingDrink",
+			"projectName": "Codeforces_cf197a6e"
+		},
+		{
+			"type": "java",
+			"name": "CutRibbon",
+			"request": "launch",
+			"mainClass": "CutRibbon",
+			"projectName": "Codeforces_cf197a6e"
+		},
 		{
 			"name": "g++ build and debug active file",
 			"type": "cppdbg",
